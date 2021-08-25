@@ -1,4 +1,4 @@
-import discord
+. discord
 from discord.ext import commands, tasks
 from discord.voice_client import VoiceClient
 import youtube_dl
@@ -49,7 +49,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
         return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
 
 
-client = commands.Bot(command_prefix='?')
+client = commands.Bot(command_prefix='u-')
 
 status = ['Jamming out to music!', 'Eating!', 'Sleeping!']
 
@@ -116,4 +116,4 @@ async def stop(ctx):
 async def change_status():
     await client.change_presence(activity=discord.Game(choice(status)))
 
-client.run('token')
+client.run('ODgwMDYzODI4MTI4MzMzODc0.YSY1Tw.zR0FpK0o7O-IOTNOfCJ6i5Y_q2Y')
